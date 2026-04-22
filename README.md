@@ -1,4 +1,4 @@
-1. Motivation
+## 1. Motivation
 
 Autonomous driving systems require accurate understanding of the surrounding environment, particularly the ability to determine the 3D positions of objects such as vehicles and pedestrians.
 
@@ -17,7 +17,7 @@ However, cameras do not provide direct depth information. This raises an importa
 
 Can a camera-only system estimate real-world object positions reliably?
 
-2. Research Objective
+## 2. Research Objective
 
 This project investigates whether a camera-based perception pipeline can provide meaningful 3D localization using:
 
@@ -30,7 +30,7 @@ The performance of YOLO-based detection models (YOLO26n and YOLO26s)
 The effectiveness of combining detection with monocular depth estimation (MiDaS)
 The feasibility of using such a system in real-time autonomous driving scenarios
 
-3. System Overview
+## 3. System Overview
 
 The proposed system combines three key components:
 
@@ -55,7 +55,7 @@ The nuScenes dataset provides ground truth annotations:
 Derived from LiDAR and sensor fusion
 These ground truth values are used as a reference to evaluate the system.
 
-4. Methodology
+## 4. Methodology
 
 The system follows a multi-stage pipeline:
 
@@ -86,7 +86,7 @@ Step 6 — Localization Error Computation
 Compare predicted 3D positions with ground truth
 Evaluate error in real-world units (meters)
 
-5. Evaluation Metrics
+## 5. Evaluation Metrics
 Localization Error
 
 The primary metric is the spatial error between predicted and ground truth positions:
@@ -102,7 +102,7 @@ Mean / median localization error
 Processing time per frame
 Frames per second (FPS)
 
-6. Dataset
+## 6. Dataset
 
 nuScenes v1.0-mini
 -10 scenes
