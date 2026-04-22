@@ -114,17 +114,48 @@ Multi-sensor recordings
 High-quality 3D object annotations
 Real-world driving scenarios
 
-7. Real-Time Considerations
+## 7. Experimental Outputs
 
-The system is evaluated not only in terms of accuracy but also runtime performance.
+The project generates the following outputs:
 
-Since autonomous driving systems require low latency:
+- overall model comparison
+- scene-level summaries
+- per-object localization results
+- class-wise comparison
 
-Inference time per frame is measured
-FPS is computed to assess real-time feasibility
+The main summary is shown below.
 
-This allows analyzing the trade-off between:
+### Overall Comparison
 
-Model complexity
-Localization accuracy 
+| Model | Scenes | Images | Total Matches | Avg Matches / Image | Mean XY Error (m) | Median XY Error (m) | Mean Total Time (s) | FPS |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| YOLO26n | 10 | 404 | 1202 | 2.97 | 12.44 | 5.38 | 0.0408 | 24.57 |
+| YOLO26s | 10 | 404 | 1520 | 3.76 | 14.67 | 7.05 | 0.0423 | 23.62 |
+
+### Class-wise Comparison
+
+| Model | Class | Matches | Mean XY Error (m) | Median XY Error (m) |
+|---|---|---:|---:|---:|
+| YOLO26n | car | 940 | 18.88 | 12.41 |
+| YOLO26n | pedestrian | 262 | 10.37 | 3.70 |
+| YOLO26s | car | 1159 | 20.03 | 13.09 |
+| YOLO26s | pedestrian | 361 | 12.30 | 5.21 |
+
+## 8. Preliminary Interpretation
+
+The results indicate that YOLO26s produces more matched detections, while YOLO26n achieves lower localization error and slightly higher runtime efficiency. This suggests that, in a camera-only 3D estimation pipeline, improved detection coverage does not necessarily lead to better real-world spatial accuracy.
+
+## 9. Repository Contents
+
+- `3d_localization_pipeline.ipynb` : main experiment notebook  
+- `all_scenes_overall_comparison.csv` : final model comparison  
+- `all_scenes_summary.csv` : scene-level summaries  
+- `all_scenes_object_results.csv` : per-object localization results  
+- `all_scenes_classwise_comparison.csv` : class-based comparison  
+
+## 10. Notes
+
+- The nuScenes dataset is not uploaded due to size limitations.
+- MiDaS produces relative depth and requires scale conversion.
+- This repository focuses on evaluation of a camera-based 3D localization pipeline.
 
