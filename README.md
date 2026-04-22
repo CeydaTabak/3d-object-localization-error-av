@@ -159,3 +159,22 @@ The results indicate that YOLO26s produces more matched detections, while YOLO26
 - MiDaS produces relative depth and requires scale conversion.
 - This repository focuses on evaluation of a camera-based 3D localization pipeline.
 
+### Results Visualization
+
+#### Overall Localization Error
+![Error Comparison](error_comparison.png)
+<img width="1887" height="1408" alt="error_comparison" src="https://github.com/user-attachments/assets/c5bebf79-8b67-4bfa-8260-a0bdff1ad368" />
+
+#### Speed vs Accuracy
+![Speed vs Error](speed_vs_error.png)
+
+<img width="1886" height="1408" alt="speed_vs_error" src="https://github.com/user-attachments/assets/b7a632a2-a8a8-42da-a23d-834a4f17adfa" />
+
+#### Class-wise Error: YOLO26n
+![Class Error YOLO26n](class_error_YOLO26n.png)
+
+<img width="1887" height="1408" alt="class_error_YOLO26n" src="https://github.com/user-attachments/assets/be920e72-f74b-4e61-8b3c-1ff84ea3b0ea" />
+#### Class-wise Error: YOLO26s
+
+![Class Error YOLO26s](class_error_YOLO26s.png)
+<img width="1887" height="1408" alt="class_error_YOLO26s" src="https://github.com/user-attachments/assets/481346ff-83a9-4779-9310-6f7ba8c6d025" />
