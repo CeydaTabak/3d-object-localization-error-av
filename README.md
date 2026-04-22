@@ -178,3 +178,11 @@ The results indicate that YOLO26s produces more matched detections, while YOLO26
 
 ![Class Error YOLO26s](class_error_YOLO26s.png)
 <img width="1887" height="1408" alt="class_error_YOLO26s" src="https://github.com/user-attachments/assets/481346ff-83a9-4779-9310-6f7ba8c6d025" />
+
+## Key Findings
+
+- YOLO26s detects more objects but produces higher localization error  
+- YOLO26n provides more stable and accurate 3D position estimates  
+- Both models operate in real-time (~24 FPS)  
+
+This shows that higher 2D detection performance does not necessarily result in better 3D localization accuracy in a camera-based system.
