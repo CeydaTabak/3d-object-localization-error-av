@@ -1,0 +1,10 @@
+ultralytics
+torch
+opencv-python
+numpy
+pandas
+matplotlib
+nuscenes-devkit
+timm
+pyquaternion
+pillow
